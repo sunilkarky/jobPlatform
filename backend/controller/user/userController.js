@@ -48,7 +48,7 @@ exports.addUser = async (req, res) => {
   }
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
-  // Create and save new user
+  
   const newUser = new User({
     name,
     email,
@@ -64,7 +64,6 @@ exports.addUser = async (req, res) => {
     data: newUser,
   });
 };
-// Edit User
 exports.editUser = async (req, res) => {
   const { id } = req.params;
   const { name, phoneNumber, gender, address } = req.body;
@@ -84,7 +83,6 @@ exports.editUser = async (req, res) => {
     });
   }
 
-  // Update fields
   user.name = name;
   user.phoneNumber = phoneNumber;
   user.gender = gender;
@@ -98,7 +96,6 @@ exports.editUser = async (req, res) => {
   });
 };
 
-// Delete User
 exports.deleteUser = async (req, res) => {
   const { id } = req.params;
 

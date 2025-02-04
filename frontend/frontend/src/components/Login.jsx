@@ -14,7 +14,7 @@ const Login = () => {
       const { data } = await loginUser({ email, password });
       localStorage.setItem('token', data.token);
       localStorage.setItem('role', data.role);
-      navigate('/'); // Redirect to home page or another page
+      navigate('/'); 
     } catch (error) {
       console.error('Error logging in:', error);
       setMessage('Invalid email or password');

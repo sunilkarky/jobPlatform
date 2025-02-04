@@ -114,7 +114,7 @@ exports.applyToTuition = async (req, res) => {
     });
   }
 
-  // Check if the user has already applied
+
   const user = await User.findById(userId);
   if (user.savedTuitions.includes(id)) {
     console.log("User has already applied to this tuition");
@@ -123,11 +123,10 @@ exports.applyToTuition = async (req, res) => {
     });
   }
 
-  // Add the tuition to the user's savedTuitions
+ 
   user.savedTuitions.push(id);
   await user.save();
 
-  // Add the user to the tuition's applications
   tuition.applications.push(userId);
   await tuition.save();
 

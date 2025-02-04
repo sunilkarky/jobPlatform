@@ -17,7 +17,7 @@ const Register = () => {
     try {
       const { data } = await registerUser({ name, email, password, phoneNumber, gender, address });
       localStorage.setItem('token', data.token);
-      navigate('/login'); // Redirect to home page or another page
+      navigate('/login'); 
     } catch (error) {
       console.error('Error registering:', error);
       if (error.response && error.response.data && error.response.data.message) {

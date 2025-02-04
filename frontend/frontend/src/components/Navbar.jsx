@@ -122,7 +122,7 @@ const Logo = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    {/* Add your logo's SVG path data here */}
+    
   </svg>
 );
 

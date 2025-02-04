@@ -12,7 +12,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({ origin: "http://localhost:5173" }));
 
-//db connect
 connectDatabase();
 
 app.listen(3000, (req, res) => {

@@ -15,7 +15,7 @@ const AdminLogin = () => {
       if (data.role === 'admin') {
         localStorage.setItem('token', data.token);
         localStorage.setItem('role', data.role);
-        navigate('/admin'); // Redirect to admin dashboard
+        navigate('/admin'); 
       } else {
         setMessage('Access denied. Admins only.');
       }
