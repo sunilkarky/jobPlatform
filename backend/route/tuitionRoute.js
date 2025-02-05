@@ -12,8 +12,6 @@ const checkRoles = require("../middleware/checkRoles");
 
 const router = require("express").Router();
 
-router.route("/").get(catchAsync(getTuitions));
-
 router
   .route("/tuitions")
   .get(catchAsync(getTuitions))
