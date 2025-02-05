@@ -1,23 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import HomePage from './components/HomePage';
 import SingleTuition from './components/SingleTuition';
-import Blogs from './components/Blogs'; // Ensure you have this component
-import About from './components/About'; // Ensure you have this component
-import Contact from './components/Contact'; // Ensure you have this component
+import Blogs from './components/Blogs';
+import About from './components/About';
+import Contact from './components/Contact';
 import Login from './components/Login';
-import Navbar from './components/Navbar';
+import AdminLogin from './components/AdminLogin';
+import AdminDashboard from './components/AdminDashboard';
 import TuitionList from './components/TuitionList';
 import TuitionForm from './components/TuitionForm';
 import UserList from './components/UserList';
 import UserForm from './components/UserForm';
-import AdminLogin from './components/AdminLogin';
-import ProtectedRoute from './components/ProtectedRoute';
-import './styles.css';
-import AdminDashboard from './components/AdminDashboard';
 import TuitionApplicants from './components/TuitionApplicants';
-import Footer from './components/Footer';
 import Register from './components/Register';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
   return (
