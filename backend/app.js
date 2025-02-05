@@ -28,8 +28,8 @@ app.listen(3000, () => {
   console.log("Started running at port 3000");
 });
 
-app.get("/", catchAsync(getTuitions));
-app.use("/", userRoute);
-app.use("/", tuitionRoute);
+app.use("", userRoute);
+app.use("", tuitionRoute);
+app.get("/tuitions", catchAsync(getTuitions));
 
 module.exports = app;
