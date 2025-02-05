@@ -27,6 +27,7 @@ router
   .get(isAuthenticated, checkRoles("admin"), catchAsync(getUser));
 
 router.get("/admin", isAuthenticated, checkRoles("admin"), getAdminDashboard);
+router.get("/admin/login", loginUser);
 
 module.exports = router;
 //admin route missing in backend will fix this in future

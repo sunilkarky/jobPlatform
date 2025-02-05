@@ -14,6 +14,7 @@ const Login = () => {
       const { data } = await loginUser({ email, password });
       localStorage.setItem('token', data.token);
       localStorage.setItem('role', data.role);
+
       navigate('/'); 
     } catch (error) {
       console.error('Error logging in:', error);
