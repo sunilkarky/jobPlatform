@@ -14,7 +14,7 @@ import UserForm from './components/UserForm';
 import AdminLogin from './components/AdminLogin';
 import ProtectedRoute from './components/ProtectedRoute';
 import './styles.css';
-import AdminDashboard from './components/adminDashboard';
+import AdminDashboard from './components/AdminDashboard';
 import TuitionApplicants from './components/TuitionApplicants';
 import Footer from './components/Footer';
 import Register from './components/Register';

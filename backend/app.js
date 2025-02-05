@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Configure CORS
 const corsOptions = {
-  origin: "https://your-vercel-app-url.vercel.app",
+  origin: "",
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true,
 };
