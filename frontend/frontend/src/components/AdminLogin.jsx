@@ -26,28 +26,30 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-box">
-        <h1>Admin Login</h1>
-        <form onSubmit={handleSubmit}>
+    <div>
+      <h2>Admin Login</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Email:</label>
           <input
             type="email"
-            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+        </div>
+        <div>
+          <label>Password:</label>
           <input
             type="password"
-            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">Login</button>
-        </form>
-        {message && <p>{message}</p>}
-      </div>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      {message && <p>{message}</p>}
     </div>
   );
 };
