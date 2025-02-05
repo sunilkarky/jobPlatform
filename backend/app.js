@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Configure CORS
 const corsOptions = {
-  origin: "https://job-platform-frontend-alpha.vercel.app", // Ensure this URL is correct
+  origin: "https://job-platform-frontend-alpha.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   credentials: true,
 };

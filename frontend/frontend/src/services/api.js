@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://job-platform-blue.vercel.app", // Ensure this URL is correct
+  baseURL: "https://job-platform-blue.vercel.app", 
 });
 
 // User-related API requests
