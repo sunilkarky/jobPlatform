@@ -10,12 +10,23 @@ require("dotenv").config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: "http://localhost:5173" }));
+// Configure CORS
+const corsOptions = {
+  origin: "https://your-vercel-app-url.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+// app.use(cors({ origin: "http://localhost:5173" }));
 
 connectDatabase();
 
 app.listen(3000, (req, res) => {
-  console.log("Satrted running at port 3000");
+  console.log("Started running at port 3000");
+});
+app.get("/", (req, res) => {
+  console.log("hello");
 });
 app.use("", userRoute);
 app.use("", tuitionRoute);
