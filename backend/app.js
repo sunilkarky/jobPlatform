@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-app.use("/users", userRoute);
-app.use("/tuitions", tuitionRoute);
+app.use("/", userRoute);
+app.use("/", tuitionRoute);
 
 module.exports = app;
