@@ -30,6 +30,8 @@ app.listen(3000, () => {
 
 app.use("", userRoute);
 app.use("", tuitionRoute);
-app.get("/", catchAsync(getTuitions));
+app.get("/", (req, res) => {
+  res.redirect("/tuitions");
+});
 
 module.exports = app;
