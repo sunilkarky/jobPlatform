@@ -5,6 +5,8 @@ const app = express();
 const cors = require("cors");
 const userRoute = require("./route/userRoute");
 const tuitionRoute = require("./route/tuitionRoute");
+const catchAsync = require("./service/catchAsync");
+const { getTuitions } = require("./controller/user/tuition/tuitionController");
 
 require("dotenv").config();
 
